@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 require("dotenv").config();
 const createError = require('http-errors');
+const compression = require('compression');
 
 // Import Routes
 const api = require('./routes/api');
@@ -22,6 +23,7 @@ mongoose.connect(process.env.DB_CONNECT,
   });
 
 // Middleware
+app.use(compression());
 app.use(express.json());
 
 // Routes
