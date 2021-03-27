@@ -1,0 +1,42 @@
+{
+  "name": "url-shortening-svc",
+  "version": "1.0.0",
+  "description": "implement a URL shortening service using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/src/index.js",
+    "startlocal": "node --inspect app/src/index.js",
+    "lint": "eslint app/src/",
+    "test": "tap app/test/",
+    "test2": "tap app/test/basic-tests.js --timeout=6000 --reporter=spec",
+    "test-debug": "node --inspect-brk=9229 app/test/basic-tests.js",
+    "test-debug2": "node --inspect-brk=9229 --max-http-header-size=80000 app/test/basic-tests.js --timeout=60000 --reporter=spec"
+  },
+  "keywords": [
+    "url",
+    "shortner"
+  ],
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19",
+    "nanoid": "^3.1.22",
+    "tinyurl": "^1.1.7",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "tap": "^14.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidteh92/url-shortening-svc.git"
+  },
+  "author": "David Teh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidteh92/url-shortening-svc/issues"
+  },
+  "homepage": "https://github.com/davidteh92/url-shortening-svc#readme"
+}
